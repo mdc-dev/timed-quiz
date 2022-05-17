@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(214, 212, 212);
+    background-color: rgb(243, 242, 242);
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: purple;
+    background-color: rgb(139, 83, 139);
     height: 30vh;
     width: 100vw;
     position: relative;
@@ -17,28 +17,30 @@ header {
 }
 
 .headline {
-    color: white;
+    color: rgb(243, 242, 242);
     font-size: 3em;
     margin: 0 20px;
     text-align: left;
     opacity: 1;
     visibility: visible;
     transition: opacity 1s linear, visibility 1s, font-size 1s, text-align 2s;
+    font-family: 'Wendy One', sans-serif;
 }
 
 .sub-heading {
-    color: white;
+    color: rgb(243, 242, 242);
     font-size: 1.2em;
     margin: 0 20px;
     opacity: 1;
     visibility: visible;
     transition: opacity 1s linear, visibility 1s, font-size 1s, text-align 2s;
+    font-family: 'Lato', sans-serif;
 }
 
 .intro-message {
     width: 80%;
     height: fit-content;
-    color: purple;
+    color: rgb(128, 127, 127);
     margin: 0 auto;
     background-color: white;
     position: relative;
@@ -52,11 +54,16 @@ header {
 .intro-message h3 {
     font-size: 1.5em;
     margin: .5em auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: rgb(71, 32, 83);
+    font-style: bold;
 }
 
 .intro-message h4 {
     font-size: 1em;
     margin: 0 auto 1em;
+    font-family: 'Lato', sans-serif;
 }
 
 .quiz-options {
@@ -91,6 +98,9 @@ header {
     font-size: 2em;
     box-shadow: 5px 5px 10px black; 
     border-radius: 5px;
+    font-family: 'Wendy One', sans-serif;
+    color: rgb(92, 30, 92);
+    text-align: center;
 }
 
 .purple-dropdown {
@@ -128,7 +138,15 @@ header {
 }
 
 .choice {
-    box-shadow: 5px 5px 10px black; 
+    box-shadow: 5px 5px 10px black;
+    color: rgb(90, 77, 90);
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+}
+
+.type {
+    font-family: 'Wendy One', sans-serif;
+    color: rgb(90, 77, 90);
 }
 
 .continue {
@@ -139,14 +157,77 @@ header {
     color: white;
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(143, 143, 143);
-    background-color: purple;
+    background-color: rgb(92, 30, 92);
+    font-family: 'Wendy One', sans-serif;
 }
 
 .result-headline {
     font-size: 4em;
+    color: rgb(92, 30, 92);
+    font-family: 'Wendy One', sans-serif;
 }
 
 .result-text {
     font-size: 2em;
     margin-bottom: 5em;
+    color: rgb(92, 92, 92);
+    font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (max-height: 700px) {
+
+    .intro-message h3 {
+        font-size: 1.5em;
+    }
+
+    .intro-message h4 {
+        font-size: .8em;
+    }
+
+    .type, .choice {
+        padding: .8em 0;
+    }
+}
+
+@media only screen and (min-width: 600px)  {
+    .intro-message h3 {
+        font-size: 3.2em;
+    }
+
+    .intro-message h4 {
+        font-size: 1.8em;
+    }
+
+    .type, .choice {
+        width: 45%;
+        padding: 4em 0em;
+        align-content: center;
+        display: inline-block;
+        margin: 0 2% 5%
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .intro-message {
+        width: 60%;
+        text-align: center;
+    }
+    
+    .quiz-options, .quiz-choices {
+        margin-top: 8em;
+        width: 60%
+    }
+
+    .type, .choice {
+        width: 45%;
+        padding:2em 0em;
+        font-size: 1.5em;
+        align-content: center;
+        display: inline-block;
+        margin: 0 2% 5%
+    }
+
+    .quiz-question {
+        width: 60%
+    }
 }

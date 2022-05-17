@@ -74,14 +74,16 @@ buttons.forEach(btn => {
 
 function handleEndOfGame(answer) {
     iterator ++;
-    continueButton.replaceWith(continueButton.cloneNode(false))
-    let newContinueButton = document.querySelector('.continue')
     questionContainer.style.display = 'none';
     optionButtonsContainer.style.display = 'none';
     resultContainer.style.display = 'block';
-    console.log(score)
     answer === 'correct' ? score = score + 25 : score = score - 10;
-    document.querySelector('.result-headline').innerHTML = 'All Done!'
+    score < 0 ? score = 0 : score;
+    if (score < 70) {
+        document.querySelector('.result-headline').innerHTML = 'Well Done!' 
+    } else {
+        document.querySelector('.result-headline').innerHTML = 'Ouch!'
+    }
     document.querySelector('.result-text').innerHTML = 'You got a score of ' + score + '/100!';
 }
 
@@ -115,7 +117,6 @@ function checkAnswer(event) {
             document.querySelector('.result-text').innerHTML = 'You got it wrong!';
             iterator++;
         } else {
-            score = score - 10;
             handleEndOfGame(answer);
         }
     }
