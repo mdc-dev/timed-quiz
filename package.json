@@ -1,0 +1,19 @@
+{
+  "name": "timed-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdc-dev/timed-quiz.git"
+  },
+  "author": "Matthew Courtney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdc-dev/timed-quiz/issues"
+  },
+  "homepage": "https://github.com/mdc-dev/timed-quiz#readme"
+}
