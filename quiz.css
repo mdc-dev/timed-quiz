@@ -235,7 +235,7 @@ header {
         font-size: 1.1em;
     }
     .quiz-options, .quiz-choices {
-        margin-top: em;
+        margin-top: 8em;
         width: 60%
     }
 
