@@ -208,7 +208,7 @@ header {
 }
 
 
-@media only screen and (min-width: 800px) and (max-width: 1300px) {
+@media only screen and (min-width: 800px) and (max-width: 1370px) {
     header {
         height: 35vh;
     }
@@ -235,7 +235,7 @@ header {
         font-size: 1.1em;
     }
     .quiz-options, .quiz-choices {
-        margin-top: 10em;
+        margin-top: 8em;
         width: 60%
     }
 
@@ -257,7 +257,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 1301px) {
+@media only screen and (min-width: 1371px) {
     .intro-message {
         width: 60%;
         text-align: center;
