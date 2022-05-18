@@ -9,7 +9,22 @@ const data = {
             "question": "Han Solo is played by what actor?",
             "choices": ["Leonardo DiCaprio", "Ben Stiller", "Harrison Ford", "Keaneu Reeves"],
             "answer": "Harrison Ford"
-        }
+        },
+        {
+            "question": "Which country does Forrest Gump travel to as part of the All-American Ping-Pong Team?",
+            "choices": ["Vietnam", "China", "Sweden", "France"],
+            "answer": "China"
+        },
+        {
+            "question": "What item is in every Fight Club scene?",
+            "choices": ["A Starbucks cup", "A Coca-Cola can", "a Dunkin' donut", "A Pepsi bottle"],
+            "answer": "A Starbucks cup"
+        },
+        {
+            "question": "If you watch the Marvel movies in chronological order, which movie would you watch first?",
+            "choices": ["Iron Man", "Doctor Strange", "Captain Marvel", "Captain America"],
+            "answer": "Captain America"
+        },
     ],
     "Sports": [
         {
@@ -21,7 +36,22 @@ const data = {
             "question": "What country has competed the most times in the Summer Olympics yet hasn’t won a gold medal?",
             "choices": ["Russia", "Ukraine", "Ghana", "Phillipines"],
             "answer": "Phillipines"
-        }
+        },
+        {
+            "question": "What do you call it when a bowler makes three strikes in a row?",
+            "choices": ["Turkey", "Hat-Trick", "Chicken", "Strike"],
+            "answer": "Turkey"
+        },
+        {
+            "question": "In motor racing, what color is the flag they wave to indicate the winner?",
+            "choices": ["Green", "Yellow", "Checkered", "Red"],
+            "answer": "Checkered"
+        },
+        {
+            "question": "Ho long is a marathon?",
+            "choices": ["5 kilometers", "32.6 miles", "22.6 miles", "26.2 miles"],
+            "answer": "26.2 miles"
+        },
     ],
     "History": [
         {
@@ -33,7 +63,22 @@ const data = {
             "question": "How many wives did Henery VIII have?",
             "choices": ["1", "2", "3", "6"],
             "answer": "6"
-        }
+        },
+        {
+            "question": "What movie does not star actor/comedian Will Ferrell?",
+            "choices": ["Dodgeball", "Step Brothers", "Zoolander", "Anchorman"],
+            "answer": "Dodgeball"
+        },
+        {
+            "question": "Han Solo is played by what actor?",
+            "choices": ["Leonardo DiCaprio", "Ben Stiller", "Harrison Ford", "Keaneu Reeves"],
+            "answer": "Harrison Ford"
+        },
+        {
+            "question": "Han Solo is played by what actor?",
+            "choices": ["Leonardo DiCaprio", "Ben Stiller", "Harrison Ford", "Keaneu Reeves"],
+            "answer": "Harrison Ford"
+        },
     ],
     "Tv Shows": [
         {
@@ -45,7 +90,22 @@ const data = {
             "question": "South Park takes place in which state?",
             "choices": ["Arizona", "Colorado", "Montana", "Nebraska"],
             "answer": "Colorado"
-        }
+        },
+        {
+            "question": "What movie does not star actor/comedian Will Ferrell?",
+            "choices": ["Dodgeball", "Step Brothers", "Zoolander", "Anchorman"],
+            "answer": "Dodgeball"
+        },
+        {
+            "question": "Han Solo is played by what actor?",
+            "choices": ["Leonardo DiCaprio", "Ben Stiller", "Harrison Ford", "Keaneu Reeves"],
+            "answer": "Harrison Ford"
+        },
+        {
+            "question": "Han Solo is played by what actor?",
+            "choices": ["Leonardo DiCaprio", "Ben Stiller", "Harrison Ford", "Keaneu Reeves"],
+            "answer": "Harrison Ford"
+        },
     ]
 }
 
@@ -77,7 +137,7 @@ function handleEndOfGame(answer) {
     questionContainer.style.display = 'none';
     optionButtonsContainer.style.display = 'none';
     resultContainer.style.display = 'block';
-    answer === 'correct' ? score = score + 25 : score = score - 10;
+    answer === 'correct' ? score = score + 20 : score = score - 10;
     score < 0 ? score = 0 : score;
     if (score < 70) {
         document.querySelector('.result-headline').innerHTML = 'Well Done!' 
@@ -98,7 +158,7 @@ function checkAnswer(event) {
         document.querySelector('.result-text').innerHTML = 'You got it right!';
         if (iterator < questionData.length - 1) {
             console.log(iterator, questionData.length)
-            score = score + 25;
+            score = score + 20;
             console.log(score)
             iterator++;
         } else if (iterator === questionData.length - 1) {
